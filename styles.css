@@ -1,0 +1,97 @@
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  background-color: #271a1a;
+}
+
+header h1 {
+  color: white;
+}
+
+.search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  margin: 30px auto;
+  background-color: #271a1a;
+  color: white;
+  height: 50px;
+}
+
+.search input {
+  outline: none;
+  color: black;
+  background-color: white;
+  width: 250px;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding-left: 20px;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 20px;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  width: 80%;
+  height: 500px;
+  overflow: scroll;
+  margin: 10px auto;
+}
+
+#load {
+  display: none;
+}
+
+.user {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 20px #271a1a;
+          box-shadow: 0px 10px 20px #271a1a;
+  border: 1px solid #271a1a;
+}
+
+.user img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.user h3 {
+  margin-top: 10px;
+  color: #271a1a;
+  text-align: center;
+}
+
+.user p {
+  margin-top: 10px;
+  color: #271a1a;
+}
+
+.user a {
+  margin: 10px 10px;
+  text-decoration: none;
+}
+/*# sourceMappingURL=styles.css.map */
