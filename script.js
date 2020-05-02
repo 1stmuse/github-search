@@ -1,16 +1,21 @@
 const content = document.querySelector('.content')
 let load = document.getElementById('load')
+let items =[]
 const getUsers = async(value)=>{
+    content.innerHTML=''
     load.style.display= 'block'
    const userData = await fetch(`https://api.github.com/search/users?q=${value}`)
     data = await userData.json()
-    console.log(data.items)
-    renderUsers(data.items)
+    items=[...data.items]
+    renderUsers(items)
+    console.log(items)
     load.style.display='none'
 }
 
 const renderUsers =(users)=>{
-    const view= users.map(user=>{
+    let view
+    if(items.length <0) return view=null
+    view= users.map(user=>{
         const div = document.createElement('div')
         div.className = 'user'
         const headName = document.createElement('h3')
@@ -29,11 +34,10 @@ const renderUsers =(users)=>{
 }
 const show= async(event)=>{
     const val =event.target.value
+    console.log(val)
     let use =await getUsers(val)
-    // const render =await renderUsers(use)
     return use
 }
 
 const but = document.querySelector('.search')
 but.addEventListener('input', show)
-but.addEventListener('change', show)
